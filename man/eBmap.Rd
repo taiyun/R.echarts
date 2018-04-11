@@ -24,4 +24,3 @@ factor array, using the JavaScript library ECharts3.
 \examples{
 eBmap()
 }
-
