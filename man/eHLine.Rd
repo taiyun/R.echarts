@@ -37,3 +37,11 @@ with symbol color, e.g. \code{series = ~groupName}}
 This function creates an HTML widget to display matrix, data.frame and 
 factor array, using the JavaScript library ECharts3.
 }
+\examples{
+chart = ePoints(iris[, 3:5], theme = 2)
+eHLine(chart,1,lineColor = 'blue')
+eHLine(chart,'min',lineWidth = 5)
+eVLine(chart,1,lineColor = 'blue')
+eVLine(chart,'min',lineWidth = 5)
+eMarkLine(chart, c(1,0), c(7,2.5))
+}

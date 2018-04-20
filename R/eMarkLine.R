@@ -17,6 +17,7 @@
 #' @param seriesIndex default is NULL,
 #' @param name default is NULL, 
 #' @export
+#' @examples 
 #' chart = ePoints(iris[, 3:5], theme = 2)
 #' eHLine(chart,1,lineColor = 'blue')
 #' eHLine(chart,'min',lineWidth = 5)
@@ -68,7 +69,7 @@ eHLine = function(chart, yvalue,lineType = 'solid',symbol = 'none', lineWidth = 
 #' @export
 eVLine = function(chart, xvalue,lineType = 'dashed',symbol = 'none', lineWidth = 1, 
                   lineColor='red',name = '', precision = NULL, seriesIndex = NULL,
-                  label = FALSE){
+                  label = FALSE,silent = TRUE){
   
   if(is.null(seriesIndex)) seriesIndex = 1:length(chart$x$series)
   tmpOptDat = list()
@@ -102,6 +103,7 @@ eVLine = function(chart, xvalue,lineType = 'dashed',symbol = 'none', lineWidth =
   }  
   
   for(i in seriesIndex){
+    chart$x$series[[i]]$markLine$silent = silent
     if(!is.null(symbol)) chart$x$series[[i]]$markLine$symbol = symbol
     if(!is.null(precision)) chart$x$series[[i]]$markLine$precision = precision
     
