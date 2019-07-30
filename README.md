@@ -1,6 +1,6 @@
 recharts
 ========
-[![Build Status](https://travis-ci.org/cosname/recharts.png)](https://travis-ci.org/cosname/recharts)
+[![Build Status](https://travis-ci.org/cosname/recharts.svg?branch=master)](https://travis-ci.org/cosname/recharts)
 
 A R interface to [ECharts](https://github.com/ecomfe/echarts) for data visualization.
 
