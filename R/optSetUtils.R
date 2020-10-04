@@ -36,7 +36,8 @@ tilteSet = function(title=NULL, link=NULL, subtitle=NULL, sublink=NULL,
 		text = title,
 		subtext = subtitle,
 		x = matchPos.x(title.x),
-		y = matchPos.y(title.y)
+		y = matchPos.y(title.y),
+		textAlign = "center"
 	)
 	return(returnList)
 }
